@@ -1,0 +1,37 @@
+\section{Related Work}\label{sec:related_work}
+The contribution of this work lies in the collaborative combination of three important cutting-edge technologies, that is offloading in MEC, UAV and blockchain. 
+This section explores the previous research carried out by combining two of those technologies.
+
+\subsection{Offloading in MEC and Blockchain}
+Amounts of existing research \cite{qiu2019online,chen2019cooperative,jiang2019hierarchical} focus on offloading the blockchain mining tasks from IoT devices to the MEC servers.
+Chen. et al\cite{chen2019cooperative} extended the offloading process to multi-hop network. 
+Jiang. et al\cite{jiang2019hierarchical} considered two scenarios with both fixed and dynamic number of miners by formulating a multi-leader multi-follower Stackelberg game.
+\cite{xu2019become} exploited using blockchain to ensure data integrity, while ignoring other security threats.
+\cite{zhang2019joint} designed two smart contracts to trade the computing resource and loan coin for mobile equipment.
+%\cite{seng2019d2d} concentrated on the matching between offloading tasks and the edge servers  or user equipments based on the blockchain platform.
+\cite{guo2019adaptive} presented a blockchain-based MEC framework for adaptive resource allocation and computation offloading where the blockchain is responsible for the management and control functions.
+However, when above frameworks of block-chain-empowered MEC integrate blockchain technology into IoT devices, they fail to consider the resource-constrained IoT devices for supporting the computation-consuming blockchain mining tasks.
+% Even though there exist solutions that do not keep the entire blockchain information locally.
+Our architecture avoids the mining burden of IoT devices and increases the flexibility for applications in a large scale of IoT device scenarios.
+
+\subsection{Offloading in MEC and UAV}
+UAVs feature broader communication coverage and are thus considered as relaying services providing computation offloading for mobile users in MEC scenarios \cite{jeong2017mobile}.
+% considered the UAVs as means to provide enhanced coverage or relaying services to mobile users for computation offloading in MEC scenarios.
+Also, the UAV's trajectory can be optimized minimizing the overall energy consumption.
+% In the meanwhile, it provides the UAV’s trajectory with the goal of energy consumption minimization.
+\cite{zhou2018uav} presented an UAV-aided mobile edge computing (UMEC) model, where an UAV with certain computing power is leveraged to relieve the communication and computing burden on the edge clouds.
+\cite{wang2020agent} considered computation offloading to both UAV and MEC. 
+The UAV agent perceives and intelligently minimizes task execution latency as well as the energy consumption.
+% , the offloading system can deliver an optimum solution with minimum task execution delay and energy consumption.
+UAVs are highly flexible, operable and response-sensitive. The above research works took advantages of these features, but failed to address the security challenges of UAVs.
+% The above research work took advantages of UAVs including high flexibility, fast response and strong operability, but failed to address the security challenges of UAVs.
+We benefit from the smart contract and give specific design for tackling the potential threats in UAVs.
+% Our solution gives a specific design of the smart contract to tackle the potential threats brought by UAVs.
+
+\subsection{UAV and Blockchain}
+% \cite{lei2019securing} addressed the content poisoning problems in Named Data Networking (NDN) using UAVs. They integrated the interest-key-content binding, forwarding strategy and on-demand verification for discovering poisoned content.
+\cite{lei2019securing} addressed the poisoned content discovery problems in Named Data Networking (NDN) using UAVs. They integrated the interest-key-content binding, forwarding policy and on-demand verification together to discover poisoned content.
+In order to reduce the high overheads in hierarchical networks, \cite{sharma2019neural} used UAVs as on-demand nodes and presented a novel 
+% neural-blockchain-based
+drone-caching framework to ensure ultra-reliable communications.
+The above methods are not very practical, which requires the cooperation of three blockchain. In our design, the UAV is apart from blockchain network, only playing the role of offloading hubs. The blockchain network is used to improve the users' trust for MEC service providers.

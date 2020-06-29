@@ -1,0 +1,115 @@
+% \documentclass[journal]{IEEEtran}
+% %
+
+% \usepackage{cite}
+% \usepackage{time}
+% \usepackage{amsmath}
+% \usepackage{graphicx}
+% \usepackage{graphics}
+% \usepackage{epsfig}
+% \usepackage{latexsym}
+% \usepackage{amsfonts}
+% \usepackage{amssymb}
+% \usepackage{paralist}
+% \usepackage{xspace}
+% \usepackage{mathrsfs}
+% \usepackage{psfrag}
+% \usepackage{color}
+% \usepackage[ruled]{algorithm}
+% \usepackage[noend]{algorithmic}
+% \usepackage{url}
+% \usepackage{subfigure}
+% \usepackage{multirow}
+% \newtheorem{theorem}{Theorem}
+% \newtheorem{axiom}[theorem]{Axiom}
+% \newtheorem{corollary}[theorem]{Corollary}
+% \newtheorem{conjecture}[theorem]{Conjecture}
+% \newtheorem{definition}{Definition}
+% \newtheorem{lemma}{Lemma}
+% \newtheorem{remark}[theorem]{Remark}
+% \newtheorem{proposition}[theorem]{Proposition}
+
+\newcommand{\bin}[1]{{\color{blue} #1}}
+
+
+% \newcounter{tempcounter}
+
+
+
+\documentclass[10pt,journal,compsoc]{IEEEtran}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{cite}
+\usepackage{epstopdf}
+\usepackage{breakurl}
+\usepackage[justification=centering]{caption}
+\usepackage{amsmath}
+\usepackage{color}
+\IEEEpubid{\begin{minipage}{\textwidth}\ \\[12pt]
+		xxx-x-xxxx-xxxx-08/19/\$31.00 \copyright 2019 IEEE \\
+		IEEE Network 
+\end{minipage}}
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+
+\begin{document}
+
+%\title{Toward High Performance, Security and Visibility Task Offloading in Drone-aided Mobile Edge Computing}
+\title{Blockchain based Task Offloading in Drone-aided Mobile Edge Computing}
+
+\author{Shuyun Luo$^{\star}$, Hang Li$^{\star}$, Zhenyu Wen$^{\dagger \Upsilon}$, Bin Qian$^{\dagger}$, Graham Morgan$^{\dagger}$, Antonella Longo$\ddagger$, Omer Rana$^\&$ and Rajiv Ranjan$^{\dagger}$
+        %Deepak Puthal $^{b}$,~\IEEEmembership{Senior Member,~IEEE}, Jian Hou$^{a}$ \\
+       % and~Jane~Doe,~\IEEEmembership{Life~Fellow,~IEEE}% <-this % stops a space
+     
+\small{$^\star$ School of Information Science $\&$ Technology, Zhejiang
+Sci-Tech University, Hangzhou, 310018, China}\\
+\small{ $^\dagger$ School of Computing, Newcastle University, Newcastle upon Tyne NE1 7RU, U.K.} \\
+\small{ $^\&$ School of Computer Science and Informatics, Cardiff University, Cardiff, CF24 3AA} \\
+\small{ $^\ddagger$ University of Salento}
+\small{ $^\Upsilon$ Zhenyu Wen is the corresponding author}
+}
+
+
+\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
+{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
+
+
+\maketitle
+
+
+\begin{abstract}
+An increasing number of cloud providers now offer Mobile Edge Computing (MEC) services for their customers to support task offloading. This is undertaken to reduce latency associated with forwarding data from IoT devices owned by customers to cloud platforms. However, two challenges remain in existing MEC scenarios: (i) the coverage of MEC services is limited; (ii) there is limited ability to develop an audit trail about which MEC service providers have processed a user's data. A new architecture for automatically offloading user tasks in MEC scenarios is proposed which addresses the two challenges above. The architecture makes use of drones to dynamically cache data generated from IoT devices and forwards this data to MEC servers that participate in a private blockchain network. We use simulation to demonstrate the use of the proposed architecture in practical MEC scenarios, demonstrating both the efficiency of the task offloading process and greater visibility of MEC service providers involved in processing user data.    
+
+\end{abstract}
+
+% Note that keywords are not normally used for peerreview papers.
+\begin{IEEEkeywords}
+ Mobile Edge Computing, Drone, Blockchain, Task Offloading
+\end{IEEEkeywords}
+
+\IEEEpeerreviewmaketitle
+\input{introduction}
+\input{related_work}
+\input{architecture}
+\input{system_design}
+\input{evaluation}
+\input{conclusion}
+
+
+\ifCLASSOPTIONcaptionsoff
+  \newpage
+\fi
+
+
+
+
+\bibliographystyle{IEEEtran}
+\bibliography{myRef}
+
+\input{biography}
+
+\end{document}
+
+

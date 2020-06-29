@@ -1,0 +1,80 @@
+\section{System Architecture} \label{sec:arch}
+In this section, we describe the architecture of the decentralized offloading system in detail.
+\bin{
+The architecture is composed of three layers with the flow of the data: \textit{Wireless Sensor Networks (WSNs)} layer, \textit{Drones} layer and \textit{MEC Servers} layer.
+\textit{WSNs} are data generators usually deployed across various environments such as buildings, streets and forests.
+The collected data is used for applications like smart building, intelligent transportation and fire alarm system etc.
+\textit{Drones} layer acts as the offloading hub for catching and forwarding the data from the WSNs to the MEC servers where data processing task proceeds.} 
+The processing tasks are offloaded to the ``best'' MEC server with the minimum task latency.
+Finally, in \textit{MEC Servers} layer, a closed blockchain is set up among MEC servers for auditing service provider's honest during user data operation.
+
+
+% The architecture is composed of three layers from the bottom to the top: Wireless Sensor Networks (WSNs) layer, Drones layer and MEC Servers layer.
+% WSNs are deployed in buildings for smart building applications, in streets for intelligent transportation and in forests for fire auto-protection system, etc.
+% Drone layer, namely offloading hub, that catches the data from IoT devices and forwards to MEC servers for processing. 
+% The processing tasks are offloaded to the “best” MEC server with the minimum task latency.
+% Moreover, the amount the MEC servers we setup a closed blockchain for auditing service provider's honest of operating users' data.
+
+
+
+
+% The IoT devices in WSNs usually generate mission-critical tasks such as face recognition, which requires large computation capacity to operate and the prompt response.
+% The IoT devices do not have sufficient computation resources to execute those tasks and adopt the offloading policy to help.
+% In order to improve the access coverage of MEC servers without compromising the high cost of MEC servers increase, we introduce the drone layer as a offloading hub to relay and cache data from IoT devices for MEC servers.
+% The offloading tasks are offloaded to the “best” MEC server with the minimum task latency.
+% Due to the heterogeneous MEC servers provided by various companies, we exploit the blockchain technology to guarantee the security and visibility of the offloaded data. 
+% describe the current UAV-aided scenarios
+%Due to the features of high mobility and reduced infrastructure costs, drones have received wide attention in various applications\cite{wang2020agent}.
+%An UAV wandering in a certain area are used as a relay to help IoT devices to offload their computing tasks to MEC servers.
+
+\bin{
+Figure \ref{fig:network-arch} illustrates the architecture of the decentralized offloading system with an example to explain the implementation details.
+As shown by the orange line, $WSN_{2}$ generates a task and forward it to $Drone_{2}$. 
+Next in the $Drone_{2}$ offloading hub, the smart contract decides that the task is offloaded to $Miner_{1}$ for analysis and proceeds accordingly.
+After the computation is finished, the results is sent all the way back to the original location where the data is generated. 
+We explain the main components for each layer that jointly execute the aforementioned example:
+\begin{itemize}
+\item Wireless Sensor Networks (WSNs) layer:
+This layer usually contains multiple IoT sensors collecting data from physical environment for various IoT applications. 
+The IoT devices within WSNs usually have limited computational power, memory and energy storage which necessitates the offloading operation.
+\item Offloading Hubs (Drones layer):
+ In our architecture, a drone is used as an offloading hub and is  responsible for: 1) relaying the offloading tasks to an appropriate MEC server, 2) translating the inter WSNs-blockchain communication protocol.
+Specifically, all drone and MEC servers are interconnected, with each drone receiving data from multiple WSNs (IoT devices)
+IoT devices will only be able to request offloading information from the blockchain using the offloading hub.
+\item Blockchain network (\textit{MEC Servers} layer):
+In the \textit{MEC Servers} layer, a blockchain network is deployed with a smart contract committing data offloading policy.
+The blockchain network contains two types of nodes: the \textit{Agent} and the \textit{Miner}.
+The \textit{Agent} is responsible for generating and deploying the smart contract to the blockchain network, such that each node in the blockchain can execute the smart contract automatically.
+The offloading tasks are then assigned to smart contract qualified \textit{Miner} nodes. 
+All operations from the assigned \textit{Miner} are recorded to blockchain for further verification.
+The blockchain network in our architecture is designed as a private blockchain for its specific functionality. 
+We chose a private blockchain since it has extra access limitation for participators to guarantee the authority of MEC servers.
+%However, in a real scenario, a public blockchain should be used to facilitate the adoption of the solution.
+\end{itemize}
+}
+
+% Figure \ref{fig:network-arch} illustrates the decentralized offloading system with the blockchain network, where a smart contract with committed offloading policy is deployed in MEC servers. 
+% The blockchain network contains two types of nodes: the agent and the miner.
+% The agent is responsible for generating the smart contract and deploying it to the blockchain network, such that each node in the blockchain can execute the smart contract automatically.
+% If a miner is qualified by the smart contract, the offloading task can be assigned. All operations from the assigned miner will be recorded to blockchain for further verification.
+% The main components in this architecture are illustrated as follows.
+% \begin{itemize}
+% \item Wireless Sensor Networks (WSNs):
+% This layer is used to collect data from physical environment for various IoT applications. 
+% Besides, the IoT devices within WSNs usually have limited computational power, memory and energy storage.
+% \item Offloading Hubs:
+%  In our architecture, a drone is used as an offloading hub, which is responsible for relaying the offloading tasks to an appropriate MEC server, as well as translating the communication protocols among WSNs and the blockchain network.
+%   The drone is connected directly with a MEC server. 
+%  Multiple WSNs can be connected to a drone and an IoT device can be connected to several drones which is convenient for handover.
+%  Moreover, multiple drones can be connected to the same MEC server.
+%   IoT devices will only be able to request offloading information from the blockchain using the offloading hub.
+% \item Blockchain network:
+% The blockchain network in our architecture is designed as a private blockchain for its specific functionality. 
+% We chose a private blockchain since it has the extra access limitation for participators to guarantee the authority of MEC servers.
+% %However, in a real scenario, a public blockchain should be used to facilitate the adoption of the solution.
+% \end{itemize}
+
+
+
+
+
